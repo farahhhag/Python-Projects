@@ -1,7 +1,12 @@
 data_valid = False
 
 while data_valid == False:
-    grade1 = float( input("Enter the first grade: ") )
+    grade1 = input("Enter the first grade: ")
+    try:
+        grade1 = float(grade1)
+    except:
+        print("Invalid input. Only numbers are accepted. Decimals should be separated with a dot.")
+        continue
     if grade1 <0 or grade1 > 10:
         print("Grade should be in between 0 to 10")
         continue
@@ -11,7 +16,12 @@ while data_valid == False:
 data_valid = False
 
 while data_valid == False:
-    grade2 = float( input("Enter the second grade: ") )
+    grade2 = input("Enter the second grade: ")
+    try:
+        grade2 = float(grade2)
+    except:
+        print("Invalid input. Only numbers are accepted. Decimals should be separated with a dot.")
+        continue
     if grade2 <0 or grade2 > 10:
         print("Grade should be in between 0 to 10")
         continue
@@ -21,7 +31,12 @@ while data_valid == False:
 data_valid = False
 
 while data_valid == False:
-    total_class = int( input("Enter the number of total class: ") )
+    total_class = input("Enter the number of total class: ")
+    try:
+        total_class = int(total_class)
+    except:
+        print("Invalid input. Only numbers are accepted.")
+        continue
     if total_class <= 0:
         print("The number of total class can't be less than 0")
         continue
@@ -31,7 +46,12 @@ while data_valid == False:
 data_valid = False
 
 while data_valid == False:
-    absences = int( input("Enter the number of total absences: ") )
+    absences = input("Enter the number of total absences: ")
+    try:
+        absences = int(absences)
+    except:
+        print("Invalid input. Only numbers are accepted.")
+        continue
     if absences <=0 or absences > total_class:
         print("The number of absences can't be less than 0 or greater than the number of total classes")
         continue
